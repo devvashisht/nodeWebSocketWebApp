@@ -33,3 +33,20 @@ app.listen(port, () => {
         ```javascript
         navigator.geoloction.getCurrentPosition((position) => {});
         ```
+
+**Using Google map api**
+
+```javascript
+io.emit(
+  "message",
+  `https://google.com/maps?q=${coords.latitude},${coords.longitude}`
+);
+```
+
+**Event Acknowledgement** - ` socket.emit(eventname,eventPayload,acknowledgementCallBack)
+
+**Bad word (validatiy)** - bad-word : npm pakage
+**Deploying on Heroku**
+heroku create <appName>
+
+- git push heroku master
